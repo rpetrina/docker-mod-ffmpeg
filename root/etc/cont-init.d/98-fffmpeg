@@ -1,0 +1,17 @@
+#!/usr/bin/with-contenv bash
+
+# Determine if setup is needed
+if [ -f /usr/bin/apt ]; then
+  ## Ubuntu
+  apt-get update
+  apt-get install --no-install-recommends -y \
+    ffmpeg
+fi
+if [ -f /sbin/apk ]; then
+  # Alpine
+  apk add --no-cache \
+    ffmpeg
+fi
+
+chown -R root:root /root
+chmod -R 600 /root/.ssh
