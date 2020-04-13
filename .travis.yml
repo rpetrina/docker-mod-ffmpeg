@@ -11,7 +11,7 @@ services:
 
 env:
   global:
-    - DOCKERHUB="rpetrina/ffmpeg-mod"
+    - DOCKERHUB="ryanp14/ffmpeg-mod"
 
 jobs:
   include:
